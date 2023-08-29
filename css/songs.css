@@ -1,0 +1,5 @@
+.multiline-text {
+  font-family: "Courier New", monospace;
+  word-wrap: break-word;
+  white-space: pre;
+}
