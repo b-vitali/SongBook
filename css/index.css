@@ -17,9 +17,9 @@ header {
 }
 
 nav {
-    background-color: #444;
+    background-color: lightblue; /* Changed to light blue */
     text-align: center;
-    padding: 0.5em;
+    padding: 1em; /* Increased padding for bigger buttons */
 }
 
 nav ul {
@@ -28,20 +28,21 @@ nav ul {
 
 nav li {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 15px; /* Increased margin for bigger buttons */
 }
 
 nav a {
     text-decoration: none;
-    color: #fff;
-    padding: 5px 10px;
-    border: 1px solid #fff;
-    border-radius: 5px;
+    color: #333; /* Changed text color for better readability */
+    padding: 10px 20px; /* Increased padding for bigger buttons */
+    border: 1px solid #333; /* Improved border color for contrast */
+    border-radius: 10px; /* Increased border-radius for rounder buttons */
+    transition: background-color 0.3s, color 0.3s; /* Added transition for smoother hover effect */
 }
 
 nav a:hover {
-    background-color: #fff;
-    color: #333;
+    background-color: #333; /* Highlight background color */
+    color: #fff; /* Highlight text color */
 }
 
 footer {

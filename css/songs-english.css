@@ -1,3 +1,9 @@
+.multiline-text {
+  font-family: "Courier New", monospace;
+  word-wrap: break-word;
+  white-space: pre;
+}
+
 .container {
     display: flex;
     gap: 20px;
