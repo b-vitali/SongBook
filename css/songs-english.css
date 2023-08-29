@@ -17,6 +17,31 @@
     border: 1px solid #ddd;
 }
 
+.author-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.author-list li:hover .song-list {
+    display: block;
+}
+
+.author-list li {
+    margin-bottom: 10px;
+}
+
+.song-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Hide song list by default */
+}
+
+.song-list li {
+    margin-left: 15px;
+}
+
 .nested-list {
     list-style: none;
     padding: 0;
