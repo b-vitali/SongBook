@@ -45,6 +45,18 @@ nav a {
     transition: background-color 0.3s, color 0.3s; /* Added transition for smoother hover effect */
 }
 
+nav a:hover {
+    background-color: #333; /* Highlight background color */
+    color: #fff; /* Highlight text color */
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+}
+
 /* Media query for screens with width up to 600px (you can adjust this value) */
 @media (orientation: portrait) {
     nav li {
@@ -57,16 +69,4 @@ nav a {
         /* Adjust width to ensure the padding and border don't cause overflow */
         width: calc(100% - 40px); /* Considering 20px padding on each side */
     }
-}
-
-nav a:hover {
-    background-color: #333; /* Highlight background color */
-    color: #fff; /* Highlight text color */
-}
-
-footer {
-    text-align: center;
-    padding: 1em;
-    background-color: #333;
-    color: #fff;
 }

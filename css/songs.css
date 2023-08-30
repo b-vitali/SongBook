@@ -111,25 +111,27 @@ section {
     display: block;
 }
 
-@media (max-width: 768px) {
+@media (orientation: portrait) {
     .container {
         flex-direction: column;
     }
 
     .sidebar, .content {
-        flex: auto; /* Equal height columns */
+        flex: 1; /* Equal height columns */
+        width: 100%; /* Take up full width */
     }
 
-    .multiline-text {
-        margin-left: 0; /* Reset margin */
-        margin-top: 10px; /* Add some spacing */
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center buttons horizontally */
+        margin-top: 20px; /* Add some spacing from the content */
     }
 
-    .author-list li:hover .song-list {
-        display: none; /* Hide song list on hover */
-    }
-
-    .nested-list a {
-        padding: 10px; /* Increase padding for touch interactions */
+    nav a {
+        display: block; /* Change to block layout for vertical buttons */
+        /* Adjust width to ensure the padding and border don't cause overflow */
+        width: calc(100% - 40px); /* Considering 20px padding on each side */
+        margin-bottom: 10px; /* Add spacing between buttons */
     }
 }
