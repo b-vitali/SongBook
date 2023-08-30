@@ -46,7 +46,7 @@ nav a {
 }
 
 /* Media query for screens with width up to 600px (you can adjust this value) */
-@media (max-width: 900px) {
+@media (orientation: portrait) {
     nav li {
         display: block; /* Change to block layout for vertical buttons */
         margin: 0 auto 15px; /* Center vertically and add margin between buttons */
