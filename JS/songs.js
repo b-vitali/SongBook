@@ -17,7 +17,6 @@ function printSong() {
 
 /* Complex function to print ALL the songs in a single (organized) PDF */
 function printAllSongs() {
-
     // Hide unnecessary elements
     const elementsToHide = ['header', '.container > .sidebar', 'nav', 'footer'];
     elementsToHide.forEach(element => {
@@ -29,19 +28,29 @@ function printAllSongs() {
     let combinedContent = '<html><head><style>.multiline-text { font-family: "Courier New", monospace; word-wrap: break-word; white-space: pre; padding-left: 0; margin-left: -220px; }';
     combinedContent += '@page { @top-center { content: counter(page) "/" counter(pages); } }';
     combinedContent += '</style></head><body>';
+    
+    // Generate the index from the existing structure
+    const authorListItems = document.querySelectorAll('.author-list > li');
+    combinedContent += '<section><h2>Song Index</h2><ul>';
+    authorListItems.forEach(authorItem => {
+        const authorName = authorItem.querySelector('a').textContent;
+        combinedContent += '<li>' + authorName + '<ul>';
+        
+        const songListItems = authorItem.querySelectorAll('.song-list li a');
+        songListItems.forEach(songItem => {
+            const songId = songItem.getAttribute('href').substring(1);
+            combinedContent += '<li><a href="#' + songId + '">' + songId + '</a></li>';
+        });
 
-    // Add song index
-    combinedContent += '<section id="index"><h2>Song Index</h2><ol>';
-    const songSections = document.querySelectorAll('.content > section');
-    songSections.forEach((section, index) => {
-        combinedContent += '<li><a href="#' + section.id + '">' + section.querySelector('h2').textContent + '</a></li>';
+        combinedContent += '</ul></li>';
     });
-    combinedContent += '</ol></section>';
+    combinedContent += '</ul></section>';
 
     // Add page break after the index
     combinedContent += '<div style="page-break-after: always;"></div>';
 
     // Add page numbers and copy song content
+    const songSections = document.querySelectorAll('.content > section');
     songSections.forEach((section, index) => {
         combinedContent += '<section id="' + section.id + '">' + section.innerHTML + '</section>';
         
@@ -52,7 +61,7 @@ function printAllSongs() {
     });
 
     combinedContent += '</body></html>';
-
+    
     // Write and print the combined content
     printWindow.document.write(combinedContent);
     printWindow.document.close();
