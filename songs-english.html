@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/songs.css"> <!-- Additional CSS for this page -->
+    <link rel="stylesheet" href="css/songs.css"> <!-- CSS for this page (you can add many) -->
     <link rel = "icon" href = "SongBook_logo-pink.png" type = "image/x-icon">   
     <title>English Songs</title> 
-
+    <script src="JS/songs.js"></script> <!-- JS with the "printSong" and "printAllSongs" functions-->
+    <style>
+         /* Class to keep the chords posistion from the txt*/
+        .multiline-text {  
+            font-family: "Courier New", monospace;
+            word-wrap: break-word;
+            white-space: pre;
+            padding-left: 0; /* Remove any left padding */
+            margin-left: -220px; /* Adjust the value as needed */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -205,6 +215,8 @@
     </div>
     <nav>
         <a href="index.html">Main menu</a>
+        <a onClick="printSong()">Print to PDF</a>
+        <a onClick="printAllSongs()">Print ALL to PDF</a>
     </nav>   
     <footer>
         <p>&copy; 2023 Your Songbook</p>

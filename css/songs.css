@@ -35,14 +35,6 @@ nav a:hover {
     color: #fff; /* Highlight text color */
 }
 
-.multiline-text {
-  font-family: "Courier New", monospace;
-  word-wrap: break-word;
-  white-space: pre;
-  padding-left: 0; /* Remove any left padding */
-  margin-left: -220px; /* Adjust the value as needed */
-}
-
 .container {
     display: flex;
     gap: 20px;
