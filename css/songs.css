@@ -119,3 +119,25 @@ section {
     display: block;
 }
 
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar, .content {
+        flex: auto; /* Equal height columns */
+    }
+
+    .multiline-text {
+        margin-left: 0; /* Reset margin */
+        margin-top: 10px; /* Add some spacing */
+    }
+
+    .author-list li:hover .song-list {
+        display: none; /* Hide song list on hover */
+    }
+
+    .nested-list a {
+        padding: 10px; /* Increase padding for touch interactions */
+    }
+}
