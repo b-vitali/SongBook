@@ -1,0 +1,121 @@
+body{
+    background-color: LightSeaGreen;
+}
+
+h1,h2{
+    text-align: center;
+}
+
+nav {
+    background-color: lightblue; /* Changed to light blue */
+    text-align: center;
+    padding: 1em; /* Increased padding for bigger buttons */
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 15px; /* Increased margin for bigger buttons */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333; /* Changed text color for better readability */
+    padding: 10px 20px; /* Increased padding for bigger buttons */
+    border: 1px solid #333; /* Improved border color for contrast */
+    border-radius: 10px; /* Increased border-radius for rounder buttons */
+    transition: background-color 0.3s, color 0.3s; /* Added transition for smoother hover effect */
+}
+
+nav a:hover {
+    background-color: #333; /* Highlight background color */
+    color: #fff; /* Highlight text color */
+}
+
+.multiline-text {
+  font-family: "Courier New", monospace;
+  word-wrap: break-word;
+  white-space: pre;
+  padding-left: 0; /* Remove any left padding */
+  margin-left: -220px; /* Adjust the value as needed */
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: LightSeaGreen;
+    color: White;
+    padding: 10px;
+}
+
+.content {
+    flex: 3;
+    padding: 10px;
+    background-color: LightBlue;
+    border: 1px solid #ddd;
+}
+
+.author-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.author-list li:hover .song-list {
+    display: block;
+    
+}
+
+.author-list li {
+    margin-bottom: 10px;
+}
+
+.song-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Hide song list by default */
+}
+
+.song-list li {
+    margin-left: 15px;
+}
+
+.nested-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nested-list label {
+    cursor: pointer;
+}
+
+.nested-list a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.nested-list a:hover {
+    background-color: #f0f0f0;
+}
+
+section {
+    display: none;
+}
+
+:target {
+    display: block;
+}
+
