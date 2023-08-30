@@ -112,6 +112,10 @@ section {
 }
 
 @media (orientation: portrait) {
+    .multiline-text {
+        font-size: 10px; /* Adjust maximum font size as needed */
+    }
+
     .container {
         flex-direction: column;
     }

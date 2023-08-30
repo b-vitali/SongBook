@@ -13,8 +13,15 @@
             font-family: "Courier New", monospace;
             word-wrap: break-word;
             white-space: pre;
+            
+            font-size: min(calc(1.5vw + 10px), 20px); /* Adjust maximum font size as needed */
+            max-height: 70vh; /* Set a maximum height for the lyrics section */
+            overflow: auto;   /* Enable scrolling when content overflows */
+            word-break: break-all;
+
             padding-left: 0; /* Remove any left padding */
             margin-left: -220px; /* Adjust the value as needed */
+            
         }
     </style>
 </head>
