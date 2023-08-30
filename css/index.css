@@ -1,3 +1,8 @@
+/* Add box-sizing property to ensure padding and border are included in element's total width */
+* {
+    box-sizing: border-box;
+}
+
 /* Reset some default styles for consistency */
 body, h1, h2, ul, li, p {
     margin: 0;
@@ -40,6 +45,20 @@ nav a {
     transition: background-color 0.3s, color 0.3s; /* Added transition for smoother hover effect */
 }
 
+/* Media query for screens with width up to 600px (you can adjust this value) */
+@media (max-width: 900px) {
+    nav li {
+        display: block; /* Change to block layout for vertical buttons */
+        margin: 0 auto 15px; /* Center vertically and add margin between buttons */
+    }
+
+    nav a {
+        display: block; /* Change to block layout for vertical buttons */
+        /* Adjust width to ensure the padding and border don't cause overflow */
+        width: calc(100% - 40px); /* Considering 20px padding on each side */
+    }
+}
+
 nav a:hover {
     background-color: #333; /* Highlight background color */
     color: #fff; /* Highlight text color */
@@ -51,4 +70,3 @@ footer {
     background-color: #333;
     color: #fff;
 }
-
