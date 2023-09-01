@@ -1,30 +1,30 @@
-/* Class to keep the chords posistion from the txt*/
-.multiline-text {  
+/* Class to keep the chords position from the text */
+.multiline-text {
     font-family: "Courier New", monospace;
     word-wrap: break-word;
     white-space: pre;
-    
-    font-size: min(calc(1.5vw + 10px), 20px); /* Adjust maximum font size as needed */
+
+    font-size: 1em; /* Base font size */
     max-height: 90vh; /* Set a maximum height for the lyrics section */
-    overflow: auto;   /* Enable scrolling when content overflows */
+    overflow: auto; /* Enable scrolling when content overflows */
     word-break: break-all;
 
-    margin-left: -20ch; /* 4 characters per tab; 5tabs = 20ch */
+    margin-left: -20ch; /* 4 characters per tab; 5 tabs = 20ch */
 }
 
-body{
+body {
     background-color: LightSeaGreen;
 }
 
-h1,h2{
+h1, h2 {
     text-align: center;
 }
 
 nav {
     margin: 10px;
-    background-color: lightblue; /* Changed to light blue */
+    background-color: lightblue;
     text-align: center;
-    padding: 1em; /* Increased padding for bigger buttons */
+    padding: 1em;
 }
 
 nav ul {
@@ -33,21 +33,21 @@ nav ul {
 
 nav li {
     display: inline-block;
-    margin-right: 15px; /* Increased margin for bigger buttons */
+    margin-right: 15px;
 }
 
 nav a {
     text-decoration: none;
-    color: #333; /* Changed text color for better readability */
-    padding: 10px 20px; /* Increased padding for bigger buttons */
-    border: 1px solid #333; /* Improved border color for contrast */
-    border-radius: 10px; /* Increased border-radius for rounder buttons */
-    transition: background-color 0.3s, color 0.3s; /* Added transition for smoother hover effect */
+    color: #333;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
-    background-color: #333; /* Highlight background color */
-    color: #fff; /* Highlight text color */
+    background-color: #333;
+    color: #fff;
 }
 
 .container {
@@ -63,6 +63,7 @@ nav a:hover {
 }
 
 .content {
+    overflow-x: auto;
     flex: 3;
     padding: 10px;
     background-color: LightBlue;
@@ -77,7 +78,6 @@ nav a:hover {
 
 .author-list li:hover .song-list {
     display: block;
-    
 }
 
 .author-list li {
@@ -88,7 +88,7 @@ nav a:hover {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: none; /* Hide song list by default */
+    display: none;
 }
 
 .song-list li {
@@ -126,37 +126,43 @@ section {
 }
 
 @media (orientation: portrait) {
-    .multiline-text {
-        font-size: 10px; /* Adjust maximum font size as needed */
-    }
-
     .container {
-        flex-direction: column;
-        align-items: center; /* Center content horizontally */
+        flex-direction: column; /* Reverse the flex order */
+        align-items: center;
     }
 
-    .sidebar, .content {
-        flex: 1; /* Equal height columns */
-        width: 100%; /* Take up full width */
+    .sidebar {
+        flex: 1;
+        width: 100%;
     }
 
     .content {
-        margin-top: 20px; /* Add some spacing from the sidebar */
-        width: calc(100% - 20px); /* Considering 20px padding on each side */
+        flex: 3;
+        width: calc(100% - 20px);
+        margin-top: 20px;
+        overflow-x: hidden;
     }
 
     nav {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center buttons horizontally */
-        margin-top: 20px; /* Add some spacing from the content */
+        align-items: center;
+        margin-top: 20px;
     }
 
     nav a {
-        display: block; /* Change to block layout for vertical buttons */
-        /* Adjust width to ensure the padding and border don't cause overflow */
-        width: calc(100% - 40px); /* Considering 20px padding on each side */
-        margin-bottom: 10px; /* Add spacing between buttons */
+        display: block;
+        width: calc(100% - 40px);
+        margin-bottom: 10px;
+    }
+
+    .multiline-text {
+        font-size: min(1em, 3vw); /* Adjust the maximum font size as needed */
     }
 }
 
+@media (orientation: landscape) {
+    .multiline-text {
+        font-size: min(1em, 3vw); /* Adjust the maximum font size as needed */
+    }
+}
