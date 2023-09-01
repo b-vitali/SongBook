@@ -3,17 +3,15 @@
     font-family: "Courier New", monospace;
     word-wrap: break-word;
     white-space: pre;
-
-    font-size: 1em; /* Base font size */
-    max-height: 90vh; /* Set a maximum height for the lyrics section */
-    overflow: auto; /* Enable scrolling when content overflows */
+    font-size: 1em;
+    max-height: 90vh;
+    overflow: auto;
     word-break: break-all;
-
-    margin-left: -20ch; /* 4 characters per tab; 5 tabs = 20ch */
+    margin-left: -20ch;
 }
 
 body {
-    background-color: LightSeaGreen;
+    background-color: var(--background-color);
 }
 
 h1, h2 {
@@ -22,13 +20,16 @@ h1, h2 {
 
 nav {
     margin: 10px;
-    background-color: lightblue;
+    background-color: var(--nav-background);
     text-align: center;
     padding: 1em;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
 }
 
 nav ul {
     list-style: none;
+    
 }
 
 nav li {
@@ -38,16 +39,16 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: var(--nav-text-color);
     padding: 10px 20px;
-    border: 1px solid #333;
-    border-radius: 10px;
+    border: var(--border-width) solid var(--nav-text-color);
+    border-radius: var(--border-radius);
     transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--link-hover-color);
+    color: var(--link-color);
 }
 
 .container {
@@ -57,25 +58,25 @@ nav a:hover {
 
 .sidebar {
     flex: 1;
-    background-color: LightSeaGreen;
-    color: White;
+    background-color: var(--sidebar-background);
+    color: var(--sidebar-text-color);
     padding: 10px;
-    border: 1px solid #ddd; /* Add a border */
-    border-radius: 10px; /* Add rounded corners */
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
 }
 
 .sidebar a {
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Use the default text color */
+    text-decoration: none;
+    color: inherit;
 }
 
 .content {
     overflow-x: auto;
     flex: 9;
     padding: 10px;
-    background-color: LightBlue;
-    border: 1px solid #ddd;
-    border-radius: 10px; /* Add rounded corners */
+    background-color: var(--content-background);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
 }
 
 .author-list {
@@ -115,10 +116,10 @@ nav a:hover {
 
 .nested-list a {
     text-decoration: none;
-    color: #333;
+    color: var(--link-color);
     display: block;
     padding: 5px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: var(--border-width) solid var(--border-color);
 }
 
 .nested-list a:hover {
@@ -135,7 +136,7 @@ section {
 
 @media (orientation: portrait) {
     .container {
-        flex-direction: column; /* Reverse the flex order */
+        flex-direction: column;
         align-items: center;
     }
 
@@ -165,12 +166,12 @@ section {
     }
 
     .multiline-text {
-        font-size: min(1em, 3vw); /* Adjust the maximum font size as needed */
+        font-size: min(1em, 3vw);
     }
 }
 
 @media (orientation: landscape) {
     .multiline-text {
-        font-size: min(1em, 3vw); /* Adjust the maximum font size as needed */
+        font-size: min(1em, 3vw);
     }
 }

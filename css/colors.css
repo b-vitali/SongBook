@@ -1,0 +1,14 @@
+/* colors.css */
+:root {
+    --background-color: LightSeaGreen;
+    --sidebar-background: LightSeaGreen;
+    --sidebar-text-color: White;
+    --content-background: LightBlue;
+    --nav-background: lightblue;
+    --nav-text-color: #333;
+    --link-color: #333;
+    --link-hover-color: #fff;
+    --border-color: #ddd;
+    --border-radius: 10px;
+    --border-width: 5px;
+}

@@ -1,9 +1,8 @@
-/* Add box-sizing property to ensure padding and border are included in element's total width */
+/* index.css */
 * {
     box-sizing: border-box;
 }
 
-/* Reset some default styles for consistency */
 body, h1, h2, ul, li, p {
     margin: 0;
     padding: 0;
@@ -11,20 +10,20 @@ body, h1, h2, ul, li, p {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: var(--background-color); /* Use the color variable */
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--background-color); /* Use the color variable */
+    color: var(--nav-text-color); /* Use the color variable */
     text-align: center;
     padding: 1em;
 }
 
 nav {
-    background-color: lightblue; /* Changed to light blue */
+    background-color: var(--nav-background); /* Use the color variable */
     text-align: center;
-    padding: 1em; /* Increased padding for bigger buttons */
+    padding: 1em;
 }
 
 nav ul {
@@ -33,40 +32,38 @@ nav ul {
 
 nav li {
     display: inline-block;
-    margin-right: 15px; /* Increased margin for bigger buttons */
+    margin-right: 15px;
 }
 
 nav a {
     text-decoration: none;
-    color: #333; /* Changed text color for better readability */
-    padding: 10px 20px; /* Increased padding for bigger buttons */
-    border: 1px solid #333; /* Improved border color for contrast */
-    border-radius: 10px; /* Increased border-radius for rounder buttons */
-    transition: background-color 0.3s, color 0.3s; /* Added transition for smoother hover effect */
+    color: var(--nav-text-color); /* Use the color variable */
+    padding: 10px 20px;
+    border: var(--border-width) solid var(--nav-text-color); /* Use the color variables */
+    border-radius: var(--border-radius); /* Use the color variable */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
-    background-color: #333; /* Highlight background color */
-    color: #fff; /* Highlight text color */
+    background-color: var(--link-hover-color); /* Use the color variable */
+    color: var(--link-color); /* Use the color variable */
 }
 
 footer {
     text-align: center;
     padding: 1em;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--nav-background); /* Use the color variable */
+    color: var(--nav-text-color); /* Use the color variable */
 }
 
-/* Media query for screens with width up to 600px (you can adjust this value) */
 @media (orientation: portrait) {
     nav li {
-        display: block; /* Change to block layout for vertical buttons */
-        margin: 0 auto 15px; /* Center vertically and add margin between buttons */
+        display: block;
+        margin: 0 auto 15px;
     }
 
     nav a {
-        display: block; /* Change to block layout for vertical buttons */
-        /* Adjust width to ensure the padding and border don't cause overflow */
-        width: calc(100% - 40px); /* Considering 20px padding on each side */
+        display: block;
+        width: calc(100% - 40px);
     }
 }
