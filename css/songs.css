@@ -62,9 +62,14 @@ nav a:hover {
     padding: 10px;
 }
 
+.sidebar a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use the default text color */
+}
+
 .content {
     overflow-x: auto;
-    flex: 3;
+    flex: 9;
     padding: 10px;
     background-color: LightBlue;
     border: 1px solid #ddd;
