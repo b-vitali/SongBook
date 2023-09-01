@@ -21,7 +21,7 @@ header {
 }
 
 nav {
-    background-color: var(--nav-background); /* Use the color variable */
+    background-color: var(--nav-background-color); /* Use the color variable */
     text-align: center;
     padding: 1em;
 }
@@ -32,7 +32,6 @@ nav ul {
 
 nav li {
     display: inline-block;
-    margin-right: 15px;
 }
 
 nav a {
@@ -60,10 +59,12 @@ footer {
     nav li {
         display: block;
         margin: 0 auto 15px;
+        text-align: center; /* Add text-align to center the text */
     }
 
     nav a {
         display: block;
-        width: calc(100% - 40px);
+        width: calc(100%);
+        text-align: center; /* Add text-align to center the text */
     }
 }

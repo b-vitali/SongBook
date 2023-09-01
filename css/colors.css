@@ -2,16 +2,16 @@
 :root {
     --background-color: #1b353f;
 
-    --sidebar-background-color: #1b353f;
+    --sidebar-background-color: #264b5a;
     --sidebar-text-color: #00ff7f;
     
     --content-background-color: #264b5a;
     --content-text-color: #00ff7f;
 
-    --nav-background-color: #1b353f;
+    --nav-background-color: #264b5a;
     --nav-text-color: #00ff7f;
     --link-color: #00ff7f;
-    --link-hover-color: #264b5a;
+    --link-hover-color: #1b353f;
 
     --border-color: #00ff7f;
     --border-radius: 10px;

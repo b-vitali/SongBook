@@ -149,7 +149,7 @@ section {
 
     .content {
         flex: 3;
-        width: calc(100% - 20px);
+        width: calc(100%);
         margin-top: 20px;
         overflow-x: hidden;
     }
