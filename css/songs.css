@@ -1,6 +1,7 @@
 /* Class to keep the chords position from the text */
 .multiline-text {
     font-family: "Courier New", monospace;
+    color: var(--content-text-color);
     word-wrap: break-word;
     white-space: pre;
     font-size: 1em;
@@ -12,6 +13,7 @@
 
 body {
     background-color: var(--background-color);
+    color: var(--content-text-color);
 }
 
 h1, h2 {
@@ -20,7 +22,7 @@ h1, h2 {
 
 nav {
     margin: 10px;
-    background-color: var(--nav-background);
+    background-color: var(--nav-background-color);
     text-align: center;
     padding: 1em;
     border: var(--border-width) solid var(--border-color);
@@ -58,7 +60,7 @@ nav a:hover {
 
 .sidebar {
     flex: 1;
-    background-color: var(--sidebar-background);
+    background-color: var(--sidebar-background-color);
     color: var(--sidebar-text-color);
     padding: 10px;
     border: var(--border-width) solid var(--border-color);
@@ -74,7 +76,7 @@ nav a:hover {
     overflow-x: auto;
     flex: 9;
     padding: 10px;
-    background-color: var(--content-background);
+    background-color: var(--content-background-color);
     border: var(--border-width) solid var(--border-color);
     border-radius: var(--border-radius);
 }
@@ -123,7 +125,7 @@ nav a:hover {
 }
 
 .nested-list a:hover {
-    background-color: #f0f0f0;
+    background-color: --link-color;
 }
 
 section {

@@ -1,14 +1,19 @@
 /* colors.css */
 :root {
-    --background-color: LightSeaGreen;
-    --sidebar-background: LightSeaGreen;
-    --sidebar-text-color: White;
-    --content-background: LightBlue;
-    --nav-background: lightblue;
-    --nav-text-color: #333;
-    --link-color: #333;
-    --link-hover-color: #fff;
-    --border-color: #ddd;
+    --background-color: #1b353f;
+
+    --sidebar-background-color: #1b353f;
+    --sidebar-text-color: #00ff7f;
+    
+    --content-background-color: #264b5a;
+    --content-text-color: #00ff7f;
+
+    --nav-background-color: #1b353f;
+    --nav-text-color: #00ff7f;
+    --link-color: #00ff7f;
+    --link-hover-color: #264b5a;
+
+    --border-color: #00ff7f;
     --border-radius: 10px;
     --border-width: 5px;
 }
