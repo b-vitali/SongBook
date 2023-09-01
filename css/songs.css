@@ -60,6 +60,8 @@ nav a:hover {
     background-color: LightSeaGreen;
     color: White;
     padding: 10px;
+    border: 1px solid #ddd; /* Add a border */
+    border-radius: 10px; /* Add rounded corners */
 }
 
 .sidebar a {
@@ -73,6 +75,7 @@ nav a:hover {
     padding: 10px;
     background-color: LightBlue;
     border: 1px solid #ddd;
+    border-radius: 10px; /* Add rounded corners */
 }
 
 .author-list {
