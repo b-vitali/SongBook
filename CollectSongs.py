@@ -18,7 +18,7 @@ def generate_song_html(song_title, song_lyrics):
         <section id="{song_title.replace(" ", "")}">
             <h2>{song_title}</h2>
             <div class="multiline-text">
-                {song_lyrics}
+    {song_lyrics}
             </div>
         </section>
     '''
