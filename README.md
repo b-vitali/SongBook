@@ -2,8 +2,8 @@
 ## How to use it
 Hi, this is my SongBook!
 The idea is quite simple:
-- Add songs (as 'html' files) or authors (as 'folders') 
-- Run the 'CollectSongs.py'
+- Add songs (as `html` files) or authors (as `folders`) 
+- Run the `CollectSongs.py`
 - Emjoy the Songbook!
 
 ## Structure
