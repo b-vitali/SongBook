@@ -15,6 +15,7 @@ function printSong() {
     });
 }
 
+
 /* Complex function to print ALL the songs in a single (organized) PDF */
 function printAllSongs() {
     // Hide unnecessary elements
@@ -25,7 +26,7 @@ function printAllSongs() {
 
     // Create a new window and start building the content
     const printWindow = window.open('', '_blank');
-    let combinedContent = '<html><head><style>.multiline-text { font-family: "Courier New", monospace; word-wrap: break-word; white-space: pre; padding-left: 0; margin-left: -220px; }';
+    let combinedContent = '<html><head><style>.multiline-text { font-family: "Courier New", monospace; font-size: 0.5em; word-wrap: break-word; white-space: pre; padding-left: 0; }';
     combinedContent += '@page { @top-center { content: counter(page) "/" counter(pages); } }';
     combinedContent += '</style></head><body>';
     

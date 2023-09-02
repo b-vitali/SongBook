@@ -20,3 +20,12 @@
     --border-radius: 10px;
     --border-width: 5px;
 }
+
+/* Add this CSS to your stylesheet or in a <style> element in the <head> of your HTML document */
+
+.logo {
+    width: 1em; /* Set the width to the size of one 'em' unit */
+    height: 1em; /* Set the height to the size of one 'em' unit */
+    vertical-align: middle; /* Align the logo vertically with the text */
+    margin-right: 0.2em; /* Add some spacing between the logo and text */
+}
