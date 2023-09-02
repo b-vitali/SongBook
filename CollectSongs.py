@@ -80,7 +80,7 @@ def generate_language_songbook(language_name, authors, songs_content):
     return language_html
 
 # Define the root directory where your song folders are located
-root_directory = "languages"
+root_directory = "songs"
 
 # Traverse the directory structure and generate songbooks
 for language_folder in os.listdir(root_directory):
