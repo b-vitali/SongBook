@@ -11,6 +11,32 @@
     margin-left: -20ch;
 }
 
+/* For Firefox */
+.multiline-text {
+    scrollbar-width: thin; /* "thin" or "auto" to show the scrollbar */
+    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+}
+
+/* For WebKit (Chrome, Safari) */
+.multiline-text::-webkit-scrollbar {
+    width: 10px; /* Width of both horizontal and vertical scrollbar */
+    height: 10px; /* Height of both horizontal and vertical scrollbar */
+}
+
+.multiline-text::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color); /* Color of the thumb (the draggable part) */
+    border-radius: 5px; /* Rounded corners for the thumb */
+}
+
+.multiline-text::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-color); /* Color of the track (the background) */
+}
+
+.multiline-text::-webkit-scrollbar-corner {
+    background-color: var(--scrollbar-track-color); /* Color for the corner */
+}
+
+
 body {
     background-color: var(--background-color);
     color: var(--content-text-color);

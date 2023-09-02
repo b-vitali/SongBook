@@ -8,6 +8,9 @@
     --content-background-color: #264b5a;
     --content-text-color: #00ff7f;
 
+    --scrollbar-thumb-color: #00ff7f; /* Customize this color */
+    --scrollbar-track-color: #1b353f; /* Customize this color */
+
     --nav-background-color: #264b5a;
     --nav-text-color: #00ff7f;
     --link-color: #00ff7f;
