@@ -26,7 +26,7 @@ def generate_song_html(song_title, song_lyrics, spotify_link):
             <div style="display: flex; justify-content: center;">
                 <iframe style="border-radius: 12px;" 
                 src="{spotify_link}" 
-                width="70%" height="80" frameborder="0" allowfullscreen="" 
+                width="90%" height="152px" frameBorder="0" allowfullscreen="" 
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
              </div>
         '''
