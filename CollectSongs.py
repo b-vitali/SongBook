@@ -1,27 +1,44 @@
 import os
 import re
 
-# Function to read the lyrics from an HTML song file
-def read_song_lyrics(song_path):
+# Function to read the lyrics and Spotify link from an HTML song file
+def read_song_data(song_path):
     with open(song_path, 'r', encoding='utf-8') as file:
         html_content = file.read()
         # Use regular expressions to extract lyrics between <div class="multiline-text"> tags
-        match = re.search(r'<div class="multiline-text">(.+?)<\/div>', html_content, re.DOTALL)
-        if match:
-            return match.group(1).strip()
+        lyrics_match = re.search(r'<div class="multiline-text">(.+?)<\/div>', html_content, re.DOTALL)
+        spotify_match = re.search(r'https://open\.spotify\.com/embed/track/([\w\d]+)\??', html_content)
 
-    return None
+        song_lyrics = lyrics_match.group(1).strip() if lyrics_match else None
+        spotify_link = spotify_match.group(0) if spotify_match else None
+
+        return song_lyrics, spotify_link
 
 # Function to generate the HTML content for a song
-def generate_song_html(song_title, song_lyrics):
-    return f'''
+def generate_song_html(song_title, song_lyrics, spotify_link):
+    song_html = f'''
         <section id="{song_title.replace(" ", "")}">
             <h2>{song_title}</h2>
+    '''
+
+    if spotify_link:
+        song_html += f'''
+            <div style="display: flex; justify-content: center;">
+                <iframe style="border-radius: 12px;" 
+                src="{spotify_link}" 
+                width="70%" height="80" frameborder="0" allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+             </div>
+        '''
+
+    song_html += f'''
             <div class="multiline-text">
 {song_lyrics}
             </div>
         </section>
     '''
+
+    return song_html
 
 # Function to generate the HTML content for an author's songs
 def generate_author_songs_html(author_name, songs):
@@ -100,12 +117,12 @@ for language_folder in os.listdir(root_directory):
                     if song_file.endswith(".html"):
                         song_path = os.path.join(author_path, song_file)
                         song_title = os.path.splitext(song_file)[0]  # Remove file extension
-                        song_lyrics = read_song_lyrics(song_path)
+                        song_lyrics, spotify_link = read_song_data(song_path)  # Read song data
 
                         if song_lyrics:
-                            songs[song_title] = song_lyrics
+                            songs[song_title] = (song_lyrics, spotify_link)
 
-                author_name = author_folder.replace('_', ' ') # Convert underscores to spaces
+                author_name = author_folder.replace('_', ' ')  # Convert underscores to spaces
                 authors.append((author_name, songs))
 
         # Sort authors alphabetically
@@ -113,7 +130,7 @@ for language_folder in os.listdir(root_directory):
 
         for author_name, songs in authors:
             authors_html += generate_author_songs_html(author_name, songs)
-            songs_content += "\n".join([generate_song_html(title, lyrics) for title, lyrics in sorted(songs.items())])
+            songs_content += "\n".join([generate_song_html(title, lyrics, spotify_link) for title, (lyrics, spotify_link) in sorted(songs.items())])
 
         language_songbook = generate_language_songbook(language_folder, authors_html, songs_content)
 
