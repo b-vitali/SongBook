@@ -28,9 +28,9 @@ Let's add the song *La mauvaise réputation* to our SongBook:
 1. To add the spotify embedded player takes a bit more effort
     1. Go on spotify and find the song *La mauvaise réputation*
     1. Click on "..."/share/embedded
-    <img src="Spotify_step1.png" title="Step 1">
+        <img src="Spotify_step1.png" title="Step 1">
     1. Check the box to *see code* and copy the link
-    <img src="Spotify_step2.png" title="Step 2">
+        <img src="Spotify_step2.png" title="Step 2">
     1. Paste the link in the `La mauvaise réputation.html` file
         ```
         <h2>La mauvaise réputation</h2></a>
