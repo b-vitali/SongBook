@@ -65,7 +65,6 @@ function printAllSongs() {
     
     // Write and print the combined content
     printWindow.document.write(combinedContent);
-    printWindow.document.close();
     printWindow.print();
 
     // Close the print window after printing
