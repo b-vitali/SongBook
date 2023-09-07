@@ -84,7 +84,7 @@ def generate_language_songbook(language_name, authors, songs_content):
             <nav>
                 <a href="index.html">Main menu</a>
                 <a onClick="printSong()">Print to PDF (Broken)</a>
-                <a onClick="printAllSongs()">Print ALL to PDF</a>
+                <a onClick="printAllSongs()">Print ALL (Offline)</a>
             </nav>
             <footer>
                 <p>&copy; Our SongBook</p>
