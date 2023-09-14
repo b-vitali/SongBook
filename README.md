@@ -10,7 +10,13 @@ It can be used offline, opening `index.html` in a web browser OR via a GitHub Pa
 This is the case for the [page](https://b-vitali.github.io/SongBook/) based on this repo.
 
 ## How to Add ...
-### A song
+### A song with the *script*
+1. Opne `Create Song.html` in a browser
+1. Fill the `Title`, `Spotify link` (**not needed**; see the next section), and `Lyrics` 
+1. Hit `Download` and place the file in the proper `Language/Author`
+1. Now open a terminal and run `path/to/SongBook$ python3 CollectSongs.py`  
+
+### A song *by hand*
 Let's add the song *La mauvaise réputation* to our SongBook:
 
 1. Create a `La mauvaise réputation.html` file in the appropriate folder: `songs/French/Georges Brassens/La mauvaise réputation.html`
@@ -41,7 +47,7 @@ Let's add the song *La mauvaise réputation* to our SongBook:
 
         </div>
         ```  
-1. Now open a terminal and run `path/to/SongBook$ python3 CollectSongspy`  
+1. Now open a terminal and run `path/to/SongBook$ python3 CollectSongs.py`  
 1. **DONE !**
 
 ### An Author
@@ -101,7 +107,7 @@ The layout of the repo is the following:
         - ...
     - ...
 
-Running CollectSongs.py will generate `language1_songbook.html`, `language2_songbook.html`, ...
+Running `CollectSongs.py` will generate `language1_songbook.html`, `language2_songbook.html`, ...
 
 Changes in the folders for the authors and/or in the html files for the songs will be automatically propagated to these "_songbook.html".
 

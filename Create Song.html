@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Song.html</title>
+</head>
+<body>
+    <h1>Create Song.html</h1>
+    <form id="htmlForm">
+        <label for="title">Song title:</label>
+        <input type="text" id="title" name="title" required><br><br>
+
+        <label for="spotify">Embeded Spotify link:</label>
+        <input type="text" id="spotify" name="spotify" required><br><br>
+
+        <label for="lyrics">Lyrics:</label><br>
+        <textarea id="lyrics" name="lyrics" rows="20" cols="100" required></textarea><br><br>
+
+        <input type="submit" value="Generate HTML">
+    </form>
+
+    <script>
+        document.getElementById("htmlForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const title = document.getElementById("title").value;
+            const spotify = document.getElementById("spotify").value;
+            const lyrics = document.getElementById("lyrics").value;
+
+            const htmlContent = `
+<h2>${title}</h2>
+${spotify}
+<div class="multiline-text">
+${lyrics}
+</div>
+`;
+
+            // Create a Blob containing the HTML content
+            const blob = new Blob([htmlContent], { type: "text/html" });
+
+            // Create a download link for the Blob
+            const a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = `${title}.html`;
+
+            // Trigger a click event to start the download
+            a.click();
+        });
+    </script>
+</body>
+</html>
