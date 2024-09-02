@@ -19,6 +19,10 @@ def generate_song_html(song_title, song_lyrics, spotify_link):
     song_html = f'''
         <section id="{song_title.replace(" ", "")}">
             <h2>{song_title}</h2>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="adjustFontSize(this, -1)">A-</button>
+                <button onclick="adjustFontSize(this, 1)">A+</button>
+            </div>
     '''
 
     if spotify_link:
@@ -63,7 +67,18 @@ def generate_language_songbook(language_name, authors, songs_content):
             <script src="JS/songs.js"></script> <!-- JS with the "printSong" and "printAllSongs" functions-->
             <script src="JS/common.js"></script><!-- JS with fetchLastCommit -->
             <script>
-                fetchLastCommit();
+                function fetchLastCommit() {{
+                    // Function to fetch the last commit (implementation needed)
+                }}
+
+                function adjustFontSize(button, change) {{
+                    const songSection = button.closest('section');
+                    const textContainer = songSection.querySelector('.multiline-text');
+                    const currentFontSize = window.getComputedStyle(textContainer, null).getPropertyValue('font-size');
+                    const newFontSize = parseFloat(currentFontSize) + change;
+
+                    textContainer.style.fontSize = newFontSize + 'px';
+                }}
             </script>
         </head>
         <body>
@@ -83,6 +98,7 @@ def generate_language_songbook(language_name, authors, songs_content):
             </div>
             <nav>
                 <a href="index.html">Main menu</a>
+                <a href="Create Song.html">Add song (Offline)</a>
                 <a onClick="printSong()">Print to PDF (Broken)</a>
                 <a onClick="printAllSongs()">Print ALL (Offline)</a>
             </nav>
