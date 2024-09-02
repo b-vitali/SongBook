@@ -11,7 +11,18 @@
             <script src="JS/songs.js"></script> <!-- JS with the "printSong" and "printAllSongs" functions-->
             <script src="JS/common.js"></script><!-- JS with fetchLastCommit -->
             <script>
-                fetchLastCommit();
+                function fetchLastCommit() {
+                    // Function to fetch the last commit (implementation needed)
+                }
+
+                function adjustFontSize(button, change) {
+                    const songSection = button.closest('section');
+                    const textContainer = songSection.querySelector('.multiline-text');
+                    const currentFontSize = window.getComputedStyle(textContainer, null).getPropertyValue('font-size');
+                    const newFontSize = parseFloat(currentFontSize) + change;
+
+                    textContainer.style.fontSize = newFontSize + 'px';
+                }
             </script>
         </head>
         <body>
@@ -29,6 +40,10 @@
                     
         <section id="Abiuradime">
             <h2>Abiura di me</h2>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="adjustFontSize(this, -1)">A-</button>
+                <button onclick="adjustFontSize(this, 1)">A+</button>
+            </div>
     
             <div style="display: flex; justify-content: center;">
                 <iframe style="border-radius: 12px;" 
@@ -206,6 +221,10 @@ Am7            Bm   N.C.
 
         <section id="Chinatown">
             <h2>China town</h2>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="adjustFontSize(this, -1)">A-</button>
+                <button onclick="adjustFontSize(this, 1)">A+</button>
+            </div>
     
             <div style="display: flex; justify-content: center;">
                 <iframe style="border-radius: 12px;" 
@@ -386,6 +405,10 @@ a volte la felicità costa meno di un pound.
 
         <section id="DitomediodiGalileo">
             <h2>Dito medio di Galileo</h2>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="adjustFontSize(this, -1)">A-</button>
+                <button onclick="adjustFontSize(this, 1)">A+</button>
+            </div>
     
             <div style="display: flex; justify-content: center;">
                 <iframe style="border-radius: 12px;" 
@@ -508,6 +531,10 @@ Dm*
 
         <section id="Elsendero">
             <h2>El sendero</h2>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="adjustFontSize(this, -1)">A-</button>
+                <button onclick="adjustFontSize(this, 1)">A+</button>
+            </div>
     
             <div style="display: flex; justify-content: center;">
                 <iframe style="border-radius: 12px;" 
@@ -679,6 +706,10 @@ Y la alegria
 
         <section id="Fuoridaltunnel">
             <h2>Fuori dal tunnel</h2>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="adjustFontSize(this, -1)">A-</button>
+                <button onclick="adjustFontSize(this, 1)">A+</button>
+            </div>
     
             <div style="display: flex; justify-content: center;">
                 <iframe style="border-radius: 12px;" 
@@ -828,6 +859,10 @@ Dm A7 Dm A7 Gm A7 Gm A7
 
         <section id="Tifastarebene">
             <h2>Ti fa stare bene</h2>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="adjustFontSize(this, -1)">A-</button>
+                <button onclick="adjustFontSize(this, 1)">A+</button>
+            </div>
     
             <div style="display: flex; justify-content: center;">
                 <iframe style="border-radius: 12px;" 
@@ -1038,6 +1073,10 @@ ti farà stare bene.
 
         <section id="Unachiave">
             <h2>Una chiave</h2>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="adjustFontSize(this, -1)">A-</button>
+                <button onclick="adjustFontSize(this, 1)">A+</button>
+            </div>
     
             <div style="display: flex; justify-content: center;">
                 <iframe style="border-radius: 12px;" 
@@ -1209,6 +1248,10 @@ G6 D F#m G
 
         <section id="VengodallLuna">
             <h2>Vengo dall Luna</h2>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="adjustFontSize(this, -1)">A-</button>
+                <button onclick="adjustFontSize(this, 1)">A+</button>
+            </div>
     
             <div style="display: flex; justify-content: center;">
                 <iframe style="border-radius: 12px;" 
@@ -1480,6 +1523,7 @@ Io si! io vengo dalla luna.
             </div>
             <nav>
                 <a href="index.html">Main menu</a>
+                <a href="Create Song.html">Add song (Offline)</a>
                 <a onClick="printSong()">Print to PDF (Broken)</a>
                 <a onClick="printAllSongs()">Print ALL (Offline)</a>
             </nav>

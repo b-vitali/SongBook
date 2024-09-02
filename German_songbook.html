@@ -11,7 +11,18 @@
             <script src="JS/songs.js"></script> <!-- JS with the "printSong" and "printAllSongs" functions-->
             <script src="JS/common.js"></script><!-- JS with fetchLastCommit -->
             <script>
-                fetchLastCommit();
+                function fetchLastCommit() {
+                    // Function to fetch the last commit (implementation needed)
+                }
+
+                function adjustFontSize(button, change) {
+                    const songSection = button.closest('section');
+                    const textContainer = songSection.querySelector('.multiline-text');
+                    const currentFontSize = window.getComputedStyle(textContainer, null).getPropertyValue('font-size');
+                    const newFontSize = parseFloat(currentFontSize) + change;
+
+                    textContainer.style.fontSize = newFontSize + 'px';
+                }
             </script>
         </head>
         <body>
@@ -29,6 +40,10 @@
                     
         <section id="BarfußAmKlavier">
             <h2>Barfuß Am Klavier</h2>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="adjustFontSize(this, -1)">A-</button>
+                <button onclick="adjustFontSize(this, 1)">A+</button>
+            </div>
     
             <div style="display: flex; justify-content: center;">
                 <iframe style="border-radius: 12px;" 
@@ -132,6 +147,10 @@ Am  F  C
 
         <section id="OftGefragt">
             <h2>Oft Gefragt</h2>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="adjustFontSize(this, -1)">A-</button>
+                <button onclick="adjustFontSize(this, 1)">A+</button>
+            </div>
     
             <div style="display: flex; justify-content: center;">
                 <iframe style="border-radius: 12px;" 
@@ -252,6 +271,10 @@ du bist zu Hause für immer und mich.
 
         <section id="OftGefragt_capo3">
             <h2>Oft Gefragt_capo3</h2>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="adjustFontSize(this, -1)">A-</button>
+                <button onclick="adjustFontSize(this, 1)">A+</button>
+            </div>
     
             <div style="display: flex; justify-content: center;">
                 <iframe style="border-radius: 12px;" 
@@ -364,6 +387,10 @@ du bist zu Hause für immer und mich.
 
         <section id="Pocahontas">
             <h2>Pocahontas</h2>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="adjustFontSize(this, -1)">A-</button>
+                <button onclick="adjustFontSize(this, 1)">A+</button>
+            </div>
     
             <div style="display: flex; justify-content: center;">
                 <iframe style="border-radius: 12px;" 
@@ -465,6 +492,10 @@ Ich halt dich nicht fest
     
         <section id="JeNeParlePasFrançais">
             <h2>Je Ne Parle Pas Français</h2>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="adjustFontSize(this, -1)">A-</button>
+                <button onclick="adjustFontSize(this, 1)">A+</button>
+            </div>
     
             <div style="display: flex; justify-content: center;">
                 <iframe style="border-radius: 12px;" 
@@ -604,6 +635,10 @@ Die verstehen nur wir zwei
 
         <section id="Lieblingsmensch">
             <h2>Lieblingsmensch</h2>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="adjustFontSize(this, -1)">A-</button>
+                <button onclick="adjustFontSize(this, 1)">A+</button>
+            </div>
     
             <div style="display: flex; justify-content: center;">
                 <iframe style="border-radius: 12px;" 
@@ -775,6 +810,7 @@ G6             Em
             </div>
             <nav>
                 <a href="index.html">Main menu</a>
+                <a href="Create Song.html">Add song (Offline)</a>
                 <a onClick="printSong()">Print to PDF (Broken)</a>
                 <a onClick="printAllSongs()">Print ALL (Offline)</a>
             </nav>
